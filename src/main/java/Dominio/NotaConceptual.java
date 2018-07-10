@@ -1,14 +1,9 @@
 package Dominio;
 
-public class NotaConceptual implements Nota {
-	String nota;
-
-	public void setNota(String nota) {
+public class NotaConceptual extends Nota {
+	
+	public NotaConceptual(String nota) {
 		this.nota = nota;
-	}
-
-	public String getNota() {
-		return nota;
 	}
 
 	public boolean aprobada() {

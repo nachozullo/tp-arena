@@ -1,17 +1,12 @@
 package Dominio;
 
-public class NotaNumerica implements Nota {
-	int nota;
+public class NotaNumerica extends Nota {
 
-	public void setNota(int nota) {
+	public NotaNumerica(String nota) {
 		this.nota = nota;
 	}
 
-	public int getNota() {
-		return nota;
-	}
-
 	public boolean aprobada() {
-		return nota > 5;
+		return Integer.parseInt(nota) > 5;
 	}
 }

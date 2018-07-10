@@ -1,13 +1,14 @@
 package Dominio;
 
-import org.uqbar.commons.model.annotations.Observable;
+import java.util.ArrayList;
+import java.util.List;
 
-@Observable
 public class Estudiante {
 	String nombre;
 	String apellido;
 	int legajo;
 	String usuarioGit;
+	List<Asignacion> asignaciones = new ArrayList<>();
 
 	public Estudiante(String nombre, String apellido, int legajo, String usuarioGit) {
 		this.nombre = nombre;
@@ -16,6 +17,8 @@ public class Estudiante {
 		this.usuarioGit = usuarioGit;
 	}
 
+	/********************* GETTERS *******************/
+	
 	public String getNombre() {
 		return nombre;
 	}
@@ -31,7 +34,13 @@ public class Estudiante {
 	public String getUsuarioGit() {
 		return usuarioGit;
 	}
+	
+	public List<Asignacion> getAsignaciones() {
+		return asignaciones;
+	}
 
+	/********************* SETTERS *******************/
+	
 	public void setNombre(String nombre) {
 		this.nombre = nombre;
 	}
@@ -47,9 +56,18 @@ public class Estudiante {
 	public void setUsuarioGit(String usuarioGit) {
 		this.usuarioGit = usuarioGit;
 	}
+	
+	public void setAsignaciones(List<Asignacion> asignaciones) {
+		this.asignaciones = asignaciones;
+	}
+	
+	/********************* METHODS *******************/
 
 	public boolean esLegajo(int legajo) {
 		return this.legajo == legajo;
 	}
 
+	public void agregarAsignacion(Asignacion asignacion) {
+		asignaciones.add(asignacion);
+	}
 }

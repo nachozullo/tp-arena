@@ -1,7 +1,6 @@
 package Dominio;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 
 import org.uqbar.commons.model.annotations.Observable;
 
@@ -21,8 +20,8 @@ public class RepositorioEstudiantes {
 		}
 	}
 
-	public void agregarEstudiantes(Estudiante[] estudiantes) {
-		listaEstudiantes.addAll(Arrays.asList(estudiantes));
+	public void agregarEstudiante(Estudiante estudiante) {
+		listaEstudiantes.add(estudiante);
 	}
 
 	public Estudiante devolverPrimerEstudiante() {
